@@ -43,9 +43,20 @@
     </div>
     <main>
         <div class="vdcontainer">
-            <video src="vd/73228-548173103_small.mp4" type="video/mp4" autoplay loop playsInline > </video>
+            <video id="xxx" src="vd/73228-548173103_small.mp4" type="video/mp4" autoplay loop playsInline > </video>
         </div>
     </main>
+    <script>
+        window.addEventListener('load', function(){
+    var newVideo = document.getElementById('xxx');
+    newVideo.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
 
+    newVideo.play();
+
+});
+    </script>
 </body>
 </html>
